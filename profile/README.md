@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./logo-inverse.svg">
+    <img src="./logo.svg" alt="PharosVPN" width="140" height="140">
+  </picture>
+</p>
+
 <h1 align="center">PharosVPN</h1>
 
 <p align="center">
