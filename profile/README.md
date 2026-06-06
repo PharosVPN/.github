@@ -38,7 +38,6 @@ both, chosen at connect.
 | **[coxswain](https://github.com/PharosVPN/coxswain)** | Controller / management plane — provisions the fleet, seals per-device profiles, admin web UI |
 | **[node](https://github.com/PharosVPN/node)** | VPN node agent — the data plane (AmneziaWG + XRay/REALITY), including multi-hop cascades |
 | **[relay](https://github.com/PharosVPN/relay)** | Control-plane relay — fixed egress hops that hide the controller's origin |
-| **[amneziawg-go](https://github.com/PharosVPN/amneziawg-go)** | AmneziaWG — obfuscated WireGuard, the primary data-plane transport |
 
 ### Clients — *caravel*
 
