@@ -64,7 +64,7 @@ controller; there are no PharosVPN servers.
 
 | Platform | Build | Get it |
 |---|---|---|
-| **macOS** | Signed `.dmg` (Developer ID; not notarized — right-click → Open on first launch) | [caravel-mac releases](https://github.com/PharosVPN/caravel-mac/releases/latest) |
+| **macOS** | Signed + notarized `.dmg` (Developer ID — opens cleanly) | [caravel-mac releases](https://github.com/PharosVPN/caravel-mac/releases/latest) |
 | **Linux** | `.AppImage` — **x86_64 + aarch64** | [caravel-linux releases](https://github.com/PharosVPN/caravel-linux/releases/latest) |
 | **Android** | Debug `.apk` (sideload; not Play-signed) | [caravel-android releases](https://github.com/PharosVPN/caravel-android/releases/latest) |
 | **iOS** | TestFlight — *coming* | — |
