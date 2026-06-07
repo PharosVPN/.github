@@ -76,7 +76,7 @@ Every repo carries a `VERSION` file and ships under semantic-version git tags
 
 - **Self-hostable first.** Your controller, your nodes, your keys — no PharosVPN servers in the path.
 - **Unlinkable by design.** The controller hides behind relays; nodes never trace back to it or to each other.
-- **Ephemeral controller.** Configure the fleet, then turn the controller off — the data plane runs on its own.
+- **Always-on, hideable controller.** It stays up to continuously keep the fleet correct and healthy, dials out with zero inbound ports, and hides behind relays — and the data plane keeps running if it's briefly down.
 - **End-to-end sealed profiles.** The controller only ever stores ciphertext; profiles are decrypted on your device.
 
 ## License
