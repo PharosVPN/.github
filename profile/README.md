@@ -45,6 +45,7 @@ both, chosen at connect.
 |---|---|
 | **[caravel](https://github.com/PharosVPN/caravel)** | Shared client core (Go) — profile parsing, account sync, the tunnel engine |
 | **[caravel-mac](https://github.com/PharosVPN/caravel-mac)** | macOS app |
+| **[caravel-linux](https://github.com/PharosVPN/caravel-linux)** | Linux desktop app (Wails) — AppImage, x86_64 + aarch64 |
 | **[caravel-ios](https://github.com/PharosVPN/caravel-ios)** | iOS app |
 | **[caravel-android](https://github.com/PharosVPN/caravel-android)** | Android app |
 | **[caravel-opnsense](https://github.com/PharosVPN/caravel-opnsense)** | OPNsense plugin — client + server (userspace amneziawg-go) |
@@ -55,6 +56,21 @@ both, chosen at connect.
 | Repo | Role |
 |---|---|
 | **[docs](https://github.com/PharosVPN/docs)** | Platform design, the sync / profile contracts, and build conventions |
+
+## Download
+
+First public builds — **`v0.1.0`, pre-alpha**. You connect them to *your own*
+controller; there are no PharosVPN servers.
+
+| Platform | Build | Get it |
+|---|---|---|
+| **macOS** | Signed `.dmg` (Developer ID; not notarized — right-click → Open on first launch) | [caravel-mac releases](https://github.com/PharosVPN/caravel-mac/releases/latest) |
+| **Linux** | `.AppImage` — **x86_64 + aarch64** | [caravel-linux releases](https://github.com/PharosVPN/caravel-linux/releases/latest) |
+| **Android** | Debug `.apk` (sideload; not Play-signed) | [caravel-android releases](https://github.com/PharosVPN/caravel-android/releases/latest) |
+| **iOS** | TestFlight — *coming* | — |
+
+Every repo carries a `VERSION` file and ships under semantic-version git tags
+(`vX.Y.Z`); `scripts/bump-version.sh` walks you through a patch/minor/major bump.
 
 ## Principles
 
