@@ -56,8 +56,8 @@ both, chosen at connect.
 | **[caravel-linux](https://github.com/PharosVPN/caravel-linux)** | Linux desktop app (Wails) — AppImage, x86_64 + aarch64 |
 | **[caravel-ios](https://github.com/PharosVPN/caravel-ios)** | iOS app |
 | **[caravel-android](https://github.com/PharosVPN/caravel-android)** | Android app |
-| **[caravel-opnsense](https://github.com/PharosVPN/caravel-opnsense)** | OPNsense plugin — client + server (userspace amneziawg-go) |
-| **[caravel-openwrt](https://github.com/PharosVPN/caravel-openwrt)** | OpenWRT package — client + server (userspace amneziawg-go) |
+| **[caravel-opnsense](https://github.com/PharosVPN/caravel-opnsense)** | OPNsense plugin — client mode shipped; server mode planned |
+| **[caravel-openwrt](https://github.com/PharosVPN/caravel-openwrt)** | OpenWRT package — client mode shipped; server mode planned |
 
 ### Design
 
