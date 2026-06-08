@@ -26,6 +26,14 @@ mTLS, optionally hides itself behind **relays**, and serves end-users native
 attacked; the nodes act only on cryptographically validated instructions and
 keep carrying traffic even if the controller goes away.
 
+The controller stays up and continuously keeps the fleet correct: it reconciles
+every node on an interval and heals drift and stalled data planes, pushes config
+to the affected nodes when a profile or device changes, and re-reconciles after a
+restart. It also runs the management plane — a token-authenticated API, a
+hash-chained audit log, live session monitoring over a gRPC stream with persisted
+history, a session-history anomaly engine (leaked-profile, impossible-travel,
+and more), and a self-hosted dashboard for all of it.
+
 Each user has devices, and each device holds named **profiles** — pick where you
 exit (a single node, or a multi-hop **cascade** entry → mid → exit) and how you
 get there: **AmneziaWG** (obfuscated WireGuard), **XRay (VLESS + REALITY)**, or
@@ -35,7 +43,7 @@ both, chosen at connect.
 
 | Repo | Role |
 |---|---|
-| **[coxswain](https://github.com/PharosVPN/coxswain)** | Controller / management plane — provisions the fleet, seals per-device profiles, admin web UI |
+| **[coxswain](https://github.com/PharosVPN/coxswain)** | Controller / management plane — always-on reconcile + auto-provision, seals per-device profiles, scoped API tokens, hash-chained audit log, live monitoring + anomaly alerts, dashboard |
 | **[node](https://github.com/PharosVPN/node)** | VPN node agent — the data plane (AmneziaWG + XRay/REALITY), including multi-hop cascades |
 | **[relay](https://github.com/PharosVPN/relay)** | Control-plane relay — fixed egress hops that hide the controller's origin |
 
@@ -75,7 +83,7 @@ Every repo carries a `VERSION` file and ships under semantic-version git tags
 ## Principles
 
 - **Self-hostable first.** Your controller, your nodes, your keys — no PharosVPN servers in the path.
-- **Unlinkable by design.** The controller hides behind relays; nodes never trace back to it or to each other.
+- **Unlinkability as posture.** The controller hides behind relays; per-server keys, endpoint-pool rotation, and onion routing aim to keep a node from tracing back to the controller or to other nodes. Shown as guidance, not enforced for you.
 - **Always-on, hideable controller.** It stays up to continuously keep the fleet correct and healthy, dials out with zero inbound ports, and hides behind relays — and the data plane keeps running if it's briefly down.
 - **End-to-end sealed profiles.** The controller only ever stores ciphertext; profiles are decrypted on your device.
 
